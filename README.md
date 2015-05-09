@@ -1,5 +1,8 @@
-# empty-webapp
-novice developer builds stack
+# admin interface
+
+a simple administrator interface for indra-net.
+
+shows who's posted data in the past few seconds (configurable in `server.coffee`), 
 
 make sure you have `node`, `npm` and `grunt`
 
