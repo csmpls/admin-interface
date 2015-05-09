@@ -11,7 +11,7 @@ connectToIndraDatabase = require('./src/db_config.js')
 # config
 port = 3333 
 secondsAgoToLook = 2
-updateInterval = 5000
+updateInterval = 3000
 publicDir = "#{__dirname}/built-app"
 
 # our db
@@ -36,7 +36,7 @@ handleResults = (data) ->
 	io.emit('userlist', connectedUsers)
 
 interval = (time, cb) -> setInterval(cb, time)
-interval(1000, () -> 
+interval(updateInterval, () -> 
 	getSince(
 		getPastTime(5)
 		, NeuroskyReading

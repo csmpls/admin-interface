@@ -25,6 +25,9 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "dependencies": {
+    "bacon.jquery": "^0.4.12",
+    "bacon.jquery.ajax": "0.0.1",
+    "bacon.model": "^0.1.12",
     "baconjs": "^0.7.53",
     "express": "^4.12.3",
     "jade": "^1.9.2",
