@@ -1,9 +1,22 @@
-example_view = require './lib/view.coffee'
 $ = require('jquery')
+io = require 'socket.io-client'
+Bacon = require 'baconjs'
+
+onlineUsersView = require './lib/OnlineUsersView.coffee'
 
 init = ->
-	console.log 'main app launching'
-	example_view.setup()
+
+	# config
+	socketURL = 'localhost:3333'
+	$userlistDiv = $("#userlist")
+
+	socket = io(socketURL)
+
+	# draw userlists to the dom
+	Bacon.fromEvent(socket, 'userlist')
+		.onValue((list) -> 
+			onlineUsersView.setup($userlistDiv, list))
+
 	console.log 'main app done+launched'
 
 # launch the app

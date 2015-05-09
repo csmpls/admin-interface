@@ -8,7 +8,6 @@ module.exports = (grunt) ->
 					src: ['app/lib/*.coffee', 'app/main.coffee'],
 					dest: 'built-app/bundle.js'
 	      		]
-
 		copy:
 			html:
 				src: 'app/index.html'

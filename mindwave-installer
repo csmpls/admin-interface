@@ -1,0 +1,13 @@
+cd ~
+curl -O http://cosmopol.is/mindwave-client.zip
+unzip mindwave-client.zip
+rm mindwave-client.zip
+cd ~/mindwave-client
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+echo "$DIR/venv/bin/python $DIR/server/local-server.py" > indra
+chmod +x indra
+sudo mv indra /bin/
+
+sudo pip install virtualenv
+virtualenv venv
+venv/bin/pip install -r requirements.txt

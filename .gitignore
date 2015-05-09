@@ -4,3 +4,4 @@ built-app/
 .DS_Store
 .sass-cache*
 npm-debug.log
+db_config.coffee

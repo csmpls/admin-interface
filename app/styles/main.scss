@@ -1,8 +1,23 @@
 $blackish: rgb(12,12,12);
 $grayish: rgb(200,200,200);
 
+$green: rgb(15,250,32);
+$yellow: rgb(250,250,130);
+
 body {
 	background-color: $blackish;
 	color:$grayish;
 	font-size:22pt;
+}
+
+li {
+	margin-bottom:5px;
+}
+
+.goodSignal {
+	background-color: $green;
+}
+
+.badSignal{
+	background-color: $yellow;
 }
